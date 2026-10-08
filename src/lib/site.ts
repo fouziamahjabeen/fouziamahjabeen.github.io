@@ -37,7 +37,7 @@ export const siteConfig = {
 
     linkedin: {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/fouzia-mahjabeen-7606b7221/",
+      href: "https://www.linkedin.com/in/fouziamahjabeen",
     },
 
     upwork: {
