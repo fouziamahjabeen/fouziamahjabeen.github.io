@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ArrowUpRight, X } from "lucide-react";
 import { siteConfig } from "@/lib/site";
@@ -15,6 +16,7 @@ const navigation = [
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const updateScrollState = () => setScrolled(window.scrollY > 0);
@@ -22,6 +24,10 @@ export default function Header() {
     window.addEventListener("scroll", updateScrollState, { passive: true });
     return () => window.removeEventListener("scroll", updateScrollState);
   }, []);
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
 
   return (
     <header
@@ -95,7 +101,7 @@ export default function Header() {
       >
         <nav aria-label="Mobile navigation">
           {navigation.map((item) => (
-            <Link key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>
+            <Link key={item.href} href={item.href}>
               <span>{item.label}</span>
               <ArrowUpRight aria-hidden="true" />
             </Link>

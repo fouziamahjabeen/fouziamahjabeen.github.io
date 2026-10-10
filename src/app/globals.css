@@ -3447,7 +3447,7 @@ main {
 .about-hero h1 .about-clarity::before {
   top: -8px;
   bottom: 0;
-  left: 0;
+  left: -10px;
   background-image:
     radial-gradient(circle, var(--accent) 0 7px, transparent 8px),
     linear-gradient(var(--accent), var(--accent));
@@ -3460,7 +3460,7 @@ main {
 }
 .about-hero h1 .about-clarity::after {
   top: 0;
-  right: 0;
+  right: -10px;
   bottom: -8px;
   background-image:
     linear-gradient(var(--accent), var(--accent)),
@@ -3471,6 +3471,11 @@ main {
   background-size:
     4px calc(100% - 8px),
     16px 16px;
+}
+@media (min-width: 768px) {
+  .about-hero h1 .about-clarity::before {
+    left: -4px;
+  }
 }
 .about-hero-bottom {
   display: grid;
@@ -5047,7 +5052,8 @@ main {
     font-size: 23px;
   }
   .work-case-study-button {
-    align-self: flex-end;
+    align-self: flex-start;
+    width: 100%;
     min-height: 44px;
   }
   .case-study-shell {
@@ -6449,7 +6455,7 @@ main {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    padding: 34vh 20px 32px;
+    padding: max(96px, 14vh) 20px max(24px, env(safe-area-inset-bottom));
     background: rgba(5, 5, 5, 0.98);
     opacity: 0;
     visibility: hidden;
@@ -6460,7 +6466,7 @@ main {
   }
   .mobile-navigation.is-open {
     display: flex;
-    padding: 34vh 20px 32px;
+    padding: max(96px, 14vh) 20px max(24px, env(safe-area-inset-bottom));
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -6470,7 +6476,7 @@ main {
     flex-direction: column;
     gap: 0;
     width: min(100%, 520px);
-    margin-inline: auto;
+    margin-inline: 0;
     border-top: 1px solid var(--line);
   }
   .mobile-navigation nav a {
@@ -6491,8 +6497,8 @@ main {
   }
   .mobile-menu-footer {
     width: min(100%, 520px);
-    margin: auto auto 0;
-    padding-top: 38px;
+    margin: auto 0 0;
+    padding-top: 28px;
   }
   .mobile-menu-footer > p {
     margin-bottom: 12px;
@@ -6503,11 +6509,13 @@ main {
   }
   .mobile-menu-socials {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
   .mobile-menu-socials a {
     display: inline-flex;
+    min-height: 20px;
     align-items: center;
     gap: 4px;
     color: var(--foreground-soft);
@@ -6535,6 +6543,18 @@ main {
   }
   .mobile-menu-footer {
     padding-top: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-video-visual {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    padding: 0;
+  }
+  .about-specialty-video {
+    object-fit: contain;
   }
 }
 

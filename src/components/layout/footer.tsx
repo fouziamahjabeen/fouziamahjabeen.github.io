@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { FaBehance, FaLinkedinIn, FaUpwork } from "react-icons/fa6";
 import { FiArrowUpRight, FiFileText } from "react-icons/fi";
@@ -42,9 +41,6 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-container">
         <div className="footer-row">
-          <Link href="/" className="footer-mobile-brand" aria-label="Fouzia Mahjabeen home">
-            <Image src="/brand/logo.png" alt="" width={48} height={48} />
-          </Link>
           <p className="footer-copyright">© 2026 Fouzia Mahjabeen. All rights reserved.</p>
 
           <nav className="footer-links" aria-label="Social links">
