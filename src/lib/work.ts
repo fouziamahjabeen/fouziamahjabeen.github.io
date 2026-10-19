@@ -28,6 +28,14 @@ export type VideoProject = {
 
 export const videoProjects: VideoProject[] = [
   {
+    title: "Motion Graphics Reel — Visual Storytelling",
+    type: "Motion Graphics · Animation · Video Editing · Visual Storytelling",
+    description:
+      "A short motion graphics project featuring dynamic typography, smooth transitions, and engaging animations to create a visually compelling experience.",
+    src: "/Videos/Video/FInal_MotionGraphics_video.mp4",
+    poster: "/Videos/Thumbnail/FInal_MotionGraphics.png",
+  },
+  {
     title: "AI-Powered Product Enhancement — SaaS Product Video",
     type: "Product video · SaaS · AI",
     description:

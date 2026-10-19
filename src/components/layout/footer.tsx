@@ -30,7 +30,7 @@ const socialLinks = [
   },
   {
     label: "Resume",
-    href: "/Fouzia-Mahjabeen-Resume.pdf",
+    href: "/Fouzia-Mahjabeen-Resume.pdf?v=20261011",
     brand: "resume",
     icon: FiFileText,
   },

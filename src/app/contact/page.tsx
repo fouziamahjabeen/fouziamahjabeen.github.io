@@ -104,7 +104,7 @@ export default function ContactPage() {
             <a
               className="connect-link"
               data-brand="resume"
-              href="/Fouzia-Mahjabeen-Resume.pdf"
+              href="/Fouzia-Mahjabeen-Resume.pdf?v=20261011"
               target="_blank"
               rel="noopener noreferrer"
             >

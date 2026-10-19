@@ -67,7 +67,7 @@ export default function Header() {
 
         <a
           className="resume-button"
-          href="/Fouzia-Mahjabeen-Resume.pdf"
+          href="/Fouzia-Mahjabeen-Resume.pdf?v=20261011"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -122,7 +122,7 @@ export default function Header() {
             <a href={siteConfig.social.video.href} target="_blank" rel="noopener noreferrer">
               {siteConfig.social.video.label} <ArrowUpRight aria-hidden="true" />
             </a>
-            <a href="/Fouzia-Mahjabeen-Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/Fouzia-Mahjabeen-Resume.pdf?v=20261011" target="_blank" rel="noopener noreferrer">
               Resume <ArrowUpRight aria-hidden="true" />
             </a>
           </div>
